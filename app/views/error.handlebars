@@ -1,0 +1,22 @@
+<br>
+<div id="accordion">
+  <div class="card">
+    <div class="card-header alert-danger" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+
+            {{ message }}&nbsp;{{ error.status }}
+
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+
+        {{ error.stack }}
+      </div>
+    </div>
+  </div>
+
+</div>

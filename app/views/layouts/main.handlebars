@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>{{title }}</title>
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  {{#if ENV_DEVELOPMENT}}
+    <script src="http://localhost:35729/livereload.js"></script>
+  {{/if}}
+</head>
+
+<body>
+
+  {{> nav}}
+  <br>
+  <div class="container-fluid">
+    {{{body}}}
+  </div>
+
+  {{> foot}}
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/umd/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+
+  <script src="/js/fontawesome-all.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      $('[data-toggle="popover"]').popover()
+
+      $('.modal').on('shown.bs.modal', function() {
+        $('form').find('*').filter(':input[type=text]:visible:first').focus();
+      });
+
+      $('.modal').on('hidden.bs.modal', function(e) {
+        // do something...
+      })
+
+    })
+  </script>
+
+  {{{_sections.script}}}
+</body>
+
+</html>
