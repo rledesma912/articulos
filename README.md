@@ -1,2 +1,2 @@
 # articulos
-app express mvc con mongo y handlebars
+app express mvc con mongo,  handlebars y bootstrap 4
